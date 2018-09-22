@@ -13,25 +13,33 @@ import prototype.interfaces.Gol;
  */
 public class GolStandard implements Gol<GolStandard> {
 
+    private String motor = "Motor AP de 180HP";
+    private String pneu = "Pneus 13/175";
+
     @Override
     public GolStandard clone() {
-        GolStandard gs = new GolStandard();
-        gs.getMotor();
-        gs.getPneu();
-
-        return gs;
-
+    
+        GolStandard golStandard = new GolStandard();
+        golStandard.toString();
+        return  golStandard;
+    
     }
 
     @Override
-    public void getMotor() {
-        System.out.println("Motor AP de 180HP");
+    public String toString() {
+        StringBuffer buffer = new StringBuffer();
+        buffer.append("-----------------")
+                .append("Veiculo Gol ")
+                .append("\n")
+                .append("com motor : " + this.motor)
+                .append("\n")
+                .append("com motor : " + this.pneu)
+                .append("\n");
+
+        return buffer.toString();
 
     }
 
-    @Override
-    public void getPneu() {
-        System.out.println("Pneus 13/175");
-    }
+    
 
 }

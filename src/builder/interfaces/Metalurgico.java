@@ -3,16 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package prototype.interfaces;
+package builder.interfaces;
 
 /**
  *
  * @author denis
- * @param <T>
  */
-public interface Gol<T> {
+public interface Metalurgico {
     
-   
-    T clone();
+    String getMotor();
+    String getPneus();
     
 }
